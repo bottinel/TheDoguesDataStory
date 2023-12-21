@@ -1,6 +1,6 @@
 ---
 name: William
 position: task abc
-image_path:  "/images/William.avif"
+image_path:  "{{ site.baseurl }}/images/William.avif"
 blurb: 
 ---

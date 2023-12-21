@@ -1,6 +1,6 @@
 ---
 name: Pablo 
 position: ...
-image_path: "/images/Pablo.jpg"
+image_path: "{{ site.baseurl }}/images/Pablo.jpg"
 blurb: 
 ---
