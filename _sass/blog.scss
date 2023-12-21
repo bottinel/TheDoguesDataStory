@@ -1,6 +1,14 @@
+body {
+    background-color: #fff; /* Set the background color to white */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+}
+
+
 .blog-posts {
 	list-style: none;
 	padding: 0;
+	background: #ffffff;
 
 	li {
 		margin: 100px 0;
@@ -27,7 +35,7 @@
 	h3 {
 		margin: 0;
 		a {
-			color: #000;
+			color: #492C2C;
 			text-decoration: none;
 			font-weight: normal;
 			font-size: 1.3em;

@@ -1,56 +1,62 @@
 ---
-title: The last sales CRM you'll ever need
-description: Track and optimize your sales team in real time
+title: Welcome to our Wiki Wacky Covid news factory!
+description: ADA
 ---
 <section class="hero">
 	<div class="text-container">
-		<h1 class="editable">The last sales CRM <strong>you'll ever need</strong></h1>
-		<p class="subtext editable">Track and optimize your sales team in real time.</p>
-		<div class="cta button alt"><a href="{{ site.baseurl }}/contact/">Get Started Free</a></div>
-		<div>
-			<img src="{{ site.baseurl }}/images/dashboard.png" alt="Screenshot" class="screenshot editable" />
-		</div>
-	</div>
+		<h1 class="editable no-wrap">Welcome to the <strong>Wiki</strong> <strong>Wacky</strong> Covid news factory!</strong></h1>
+                <p class="subtext editable">Do you remember when we were in lockdown, already 3 years ago? You certainly must remember about reading strange "news" circling on the internet, like that drinking hand disinfectant could kill the virus in the body, or that a certain billionaire put microchips in the vaccines... Of course some of them were so outlandish that were impossible to believe, but other news were perfectly credible – Vitamin C cures covid, Covid remains in the body permanently. Anyways these news or conspiracy theories were (and still are) a source of interest for a lost of us. How do we inform ourselves about them? For most of us the main source of general information is <strong>Wikipedia</strong>, which strives to be a neutral platform vigilant against misinformation. For this reason a page is never explicitly labelled as “fake”, but we can still cluster articles related to a certain Fake news topic and analyse its page view count in a certain period of time. As such, page visits of properly clustered articles are a powerful tool to monitor interest related to a specific fake news, and whether it was used by users as a resource to fact check, or a way to go deeper down the rabbit hole doesn’t matter. In this project, we want to evaluate the usefulness of Wikipedia as a tool for studying misinformation. </p>
+ 
+                
+                <pclass="subtext editable"> Read below for an outline of our investigation.   </p>
+        </div>
 </section>
 
 <div class="content">
-	<section>
+	<section id="linkHere">
 		<div class="container flex">
 			<div class="text editable">
-				<h2>How can we <strong>double</strong> our sales revenue?</h2>
-				<p>Hydra learns your business. By analyzing your sales data, Hydra optimizes your sales process and show you where you should be spending your resources. </p>
+				<h2> Can we extract fake news from Wikipedia?</h2>
+				<p> During the period of interest (lockdown of 2020) with respect to the other years, is there a statistically significant increase in views for pages related to fake news compared to other articles in Wikipedia? It's interesting to investigate what this tells us about the public’s interests: can we differentiate the increase in fake news interest from the general increase in traffic to wikipedia during the lockdown period? And what about Covid-related news? </p>
+		
 			</div>
-			<div class="image">
-				<img src="{{ site.baseurl }}/images/dashboard.png" alt="Screenshot" class="screenshot editable" />
-			</div>
+			 <div class="image">
+                                <img src="{{ site.baseurl }}/images/corona-wiki.png" alt="" />
+                                <s class="image-caption">Image from https://www.cnet.com/science/features/wikipedia-is-at-war-over-the-coronavirus-lab-leak-theory/</s>
+                        </div>	
 		</div>
 	</section>
+	
+	<section id="linkHere">
+                <div class="container flex">
+                        <div class="text editable">
+                                <h2> Can we identify the emergence of fake news? </h2>
+                                <p> We want to analyse fake news published during the covid lockdown and prove correlation between fake news publication and wikipedia pageview count increase. What can we infere in terms of duration of increased interest? </p>
+                        
+                        </div>
+                         <div class="image">
+                                <img src="{{ site.baseurl }}/images/covid_fakenews.webp" alt="" />
+                                <s class="image-caption">Image from https://www.nytimes.com/2021/02/12/well/covid-vaccine-misinformation.html</s>
+                        </div>
+                </div>
+        </section>
+
 
 	<section>
 		<div class="container flex">
 			<div class="text editable">
-				<h2>How can I <strong>keep track</strong> of my sales team?</h2>
-				<p>Hydra learns your business. By analyzing your sales data, Hydra optimizes your sales process and show you where you should be spending your resources.</p>
+				<h2>Covid fake news around the world </h2>
+				<p>How different are the past analysis if we consider different languages? Are there cultural differences between popular fake news or do they overlap? Finally, can we link this with country-specific mobility change points and government interventions?   </p>
 			</div>
 			<div class="image">
-				<img src="{{ site.baseurl }}/images/dashboard.png" alt="Screenshot" class="screenshot editable" />
-			</div>
+                                <img src="{{ site.baseurl }}/images/news.webp" alt=""  />
+                                <s class="image-caption">Image from https://www.scientificamerican.com/article/information-overload-helps-fake-news-spread-and-social-media-knows-it/</s>
+                        </div>
 		</div>
 	</section>
 
-	<section>
-		<div class="container flex">
-			<div class="text editable">
-				<h2>How can I <strong>forecast</strong> the next 90 days?</h2>
-				<p>Hydra learns your business. By analyzing your sales data, Hydra optimizes your sales process and show you where you should be spending your resources.</p>
-			</div>
-			<div class="image">
-				<img src="{{ site.baseurl }}/images/dashboard.png" alt="Screenshot" class="screenshot editable" />
-			</div>
-		</div>
-	</section>
 
-	<section class="testimonial">
+<!--	<section class="testimonial">
 		<div class="container flex">
 			<div class="testimonial-block">
 				<div class="square-image"><img src="https://source.unsplash.com/6anudmpILw4/600x400" alt="Jim James" class="editable"></div>
@@ -60,10 +66,27 @@ description: Track and optimize your sales team in real time
 				</blockquote>
 			</div>
 		</div>
-	</section>
+	</section> -->
 
 	<section class="bottom-cta">
-		<h2 class="editable"><strong>Improve</strong> your sales process today</h2>
-		<div class="button alt"><a href="#">Get Started Free</a></div>
+		<h2 class="editable">Learn about our analysis </h2>
+		<div class="button alt"><a href="/blog/index.html">Read our Datastory</a></div>
 	</section>
+
+<script>
+    document.querySelector('.cta.button.alt').addEventListener('click', function (e) {
+        e.preventDefault();
+
+        const targetId = this.getAttribute('href').substring(1);
+        const targetSection = document.getElementById(targetId);
+
+        if (targetSection) {
+            window.scrollTo({
+                top: targetSection.offsetTop,
+                behavior: 'smooth'
+            });
+        }
+    });
+
+</script>
 </div>

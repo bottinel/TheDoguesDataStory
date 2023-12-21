@@ -18,10 +18,9 @@
 }
 
 header {
-	color: #fff;
+	color: #E5E5E5;
 	padding: 20px 0;
-	background: $brand-color; /* Old browsers */
-	background: linear-gradient(to bottom, $brand-color 0%, $middle-gradient-color 100%) no-repeat $brand-color;
+	background: #934A5F;
 
 	a {
 		color: #fff;
@@ -50,7 +49,7 @@ header {
 }
 
 .content {
-	background: #fff;
+	background: #F4F4F4;
 	padding: 1px 0 0 0;
 	position: relative;
 }

@@ -1,24 +1,20 @@
 # ----
 # Site
 
-title: Hydra Template
-url: "https://proud-alligator.cloudvent.net"
-baseurl:
-google_analytics_key:
-google_maps_javascript_api_key:
-disqus_shortname:
+title: Wiki Whaky Covid News
+url: "https://Wiki-Whacky-Covid-News"
+baseurl: 
 
 # Values for the jekyll-seo-tag gem (https://github.com/jekyll/jekyll-seo-tag)
-logo: /siteicon.png
-description: Product marketing template for Jekyll.
-author:
-  name:
-  email:
-  twitter: # twitter username without the @ symbol
-social:
-  name: Hydra Template
+logo: /wikiwacky_logo
+description: Our Datastory for ADA
+author: 
+  name: Tecla Bottinelli Montandon
+  email: tecla.bottinellimontandon@epfl.ch
+  social: github
+  name: ada-2023-project-thedogues1815
   links:
-    - https://github.com/CloudCannon/hydra-jekyll-template
+    - https://github.com/epfl-ada/ada-2023-project-thedogues1815.git
 
 # -----
 # Build
