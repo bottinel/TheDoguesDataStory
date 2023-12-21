@@ -6,14 +6,11 @@ description:
 
 <div class="content-wrapper" style="background-color: #FFFFFF;">
 
-  <!-- Top band in the main color -->
-  <div class="top-band" style="background-color: #934A5F; height: 0px;"></div>
-
   <section id="linkHere">
     <div class="container flex">
       <div class="text editable" style="background-color: #FFFFFF;">
         
-        {% for post in paginator.posts | reverse %}
+        {% for post in paginator.posts %}
           <div class="blog-post" style="margin-bottom: 20px;">
             <h1>{{ post.title }}</h1>
             {{ post.content }}
