@@ -1,7 +1,8 @@
 // Only declare languages if not already declared
 if (typeof languages === 'undefined') {
-    const languages = ['eng', 'es', 'fr','it'];
+    const languages = ['en', 'es', 'fr','it', 'ar', 'de', 'ru','zh'];
 }
+
 
 
 // Function to show the pie chart for the selected language
@@ -10,8 +11,11 @@ function showPieChart(language) {
     pieChartContainer.innerHTML = '';
 
     const image = document.createElement('img');
-    image.src = `${language}_pie/${language}_mainheadings.png`;  // Use a common filename for all languages
-    image.alt = `${language} Pie Chart`;
+    image.src = `${baseurl}/blog/wordclouds/wordcloud_${language}.png`;  
+    image.alt = '';
+    image.style="width: 50%;" 
+
+
     pieChartContainer.appendChild(image);
 }
 
@@ -23,6 +27,6 @@ function showLanguage(language) {
 // Initial setup when the page loads
 document.addEventListener('DOMContentLoaded', () => {
     // Default to showing English
-    showLanguage('eng');
+    showLanguage('en');
 });
 
