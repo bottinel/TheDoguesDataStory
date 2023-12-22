@@ -13,7 +13,7 @@ function showPieChart(language) {
     const image = document.createElement('img');
     image.src = `${baseurl}/blog/wordclouds/wordcloud_${language}.png`;  
     image.alt = '';
-    image.style="width: 50%;" 
+    image.style="width: 100%;" 
 
 
     pieChartContainer.appendChild(image);

@@ -52,26 +52,31 @@ The values after the maximum point still indicate a relatively strong positive c
 </div>
 
 
-Now that we have proved that the viewcount is a good match of the topics and behaviours of fake news publications
+Now that we have proved that the viewcount is a good match of the topics and behaviours of fake news publications in time, we want to establish a storyline of fake news interest during the different phases of the pandemic. We plot first the *virality* (speed of viewpoint increase), and then the *popularity* (percentage of viewpoint increase) relative to the mobility.
 
-So, let's analyze this graph!
+The virality will allow us to discern the impact of each article by evaluating its rate of change in popularity relative to the normalized derivative of the Wikipedia view count, providing a more accurate measurement of its viral dynamics within the broader context of online content engagement.
 
-(Since we are calculating a rolling average of the past 15 values, we are 15 days behind.)
-
-•⁠  ⁠So, before the first death - 15 days, all the fake news topics were increasing and decreasing in the same way as Wikipedia.
-•⁠  ⁠After the first death - 15 days, we observe another behavior: the fake news topics were increasing more than the COVID articles. That means a greater interest in fake news in comparison to other subjects on Wikipedia.
-•⁠  ⁠At the lockdown - 15 days, Wikipedia increased way more than the fake news topics. That's why we see negative values.
-•⁠  ⁠However, this happened only for 1 month; after that, the fake news topics were again increasing more than Wikipedia's articles by around 15% each day!
+While the popularity will allow us to discern how much it deviate from the Wikipedia trendline after normalization. Positive value means that the topic has a relative viewcount higher than the relative viewcount of Wikiepdia's. And therefore a greater interest in the topic
 
 
 {% include_relative /plots/corr_2.html %}
 
 
+In the 15 days before the first death, all the fake news topics were increasing and decreasing in the same way as Wikipedia. 
+
+On the opposite, in the 15 days after, we observe another behavior, the fake news topics were increasing more than the COVID articles. This means that there was a greater interest in fake news in comparison to other subjects on Wikipedia.
+
+At the lockdown mobility change point, Wikipedia increased way more than the fake news topics. That's why we see negative values. However, this happened only for 1 month; after that, the fake news topics were again increasing more than Wikipedia's articles by a constant amount!
+
+
+{% include_relative /plots/corr_3.html %}
+
+The topic has seen an increase in views after the lockdown. Therefore, there is a growing interest in the topic of fake news right after the lockdown. What's interesting to note is that the topics show increases at different timings. It starts with the spread, then the origin, prevention, treatment, the vaccine, concluding with incidence and mortality
+
 
 **Conclusion**
 
-
 The fake news dataset enables us to verify that the topics classified as Fake News on Wikipedia are representative of general media attention with an 85% match. This means that Wikipedia is a useful tool to study general media and user interest towards COVID-19 Fake News!
 From there, we used the pageviews information to study the virality and popularity of each topic with regards to the norm. We observe that each topic is closely related and they move together.
-It is also observed that mobility restrictions had a significant impact on our trends, with interest towards articles slowly rising after the first reported deaths, sinking dramatically after the beginning of lockdown, and then picking back up after the end of lockdowns. These observations show that Fake News mostly picked up when "regular" social contexts were in order, whereas when everyone was at home and not directly impacted by the disease, interest fell. It would perhaps be interesting to study the viewcounts of pages directly related to political instances which decided to put lockdowns in place, as the interest probably shifted in that direction, but we did not have that data from the COVID-19 misinformation plot alone.
+It is also observed that mobility restrictions had a significant impact on our trends, with interest towards articles slowly rising after the first reported deaths, sinking dramatically after the beginning of lockdown, and then picking back up after the end of lockdowns. These observations show that Fake News mostly picked up when "regular" social contexts were in order, whereas when everyone was at home and not directly impacted by the disease, interest fell. 
 

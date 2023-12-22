@@ -1,6 +1,6 @@
 ---
 name: Antonio Cesar Miranda Donez
-position: Part 2 and 3
+position: Research question 1 and 2
 image_path: /images/Antonio.jpg
-blurb: Antonio is... 
+blurb:  
 ---

@@ -5,7 +5,9 @@ Now that we have proven than Wikipedia is actually a good tool to study the phen
 
 ## Methods
 
-To see the similarities in Wikipedia articles across different languages, we create a pseudo-bag of words for the titles of the equivalent Wikipedia pages about COVID-19 parsed from the Multi_lang_COVID_misinformation. We clean the links, separating the words and removing stopwords and words that are over present, and then we count the number of unique words, along with their number frequency to create word clouds for each language.
+To see the similarities in Wikipedia articles across different languages, we create a multilingual version of the COVID-19 misinformation dataset, with the links of pages for 9 different languages (English, French, Italian, Spanish, German, Arab, Portuguese, Russian, and Chinese). We also fetch the english version of the newfound links (if existing).
+
+After an initial analysis, a pseudo-bag of words was created from the titles of the english version of the pages for every language. We clean the links, separating the words and removing stopwords and words that are over present, and then we count the number of unique words, along with their number frequency to create word clouds for each language.
 
 In order to quantify better the relationship between languages, we can construct chord plots with the thickness of the chords tying two languages that is proportional to a given overlap metric. We propose two possibilities to study the overlap between these languages.
 The first is through the count of shared articles between languages.
@@ -15,9 +17,16 @@ We also investigate the articles which had no english equivalent by calculating 
 
 ## What are the hot topics for different languages?  
 
-We created these words clouds that represent the most frequent words from the titles of wikipedia pages about COVID misinformation for 9 different languages. 
 
+As a preliminary analysis, we plot the percentage of Wikipedia pages that have an english version, along with the percentage of those who are present only in the native language and the average overlap of links between languages.
 
+{% include_relative /plots/127.0.0.1.html %}
+
+We can see that the percentage of articles which are present only in the original language range from 0 to 20% (maximum value for German). Interestingly, Arab has almost all articles present in the English version, and also has the biggest overlap with the other languages. This could be explained by Arabic being a widely spoking languages under a lot of different influences which leads it to be more impacted by mainstream news and have less focus on local and specific fake news. For the other languages we see a similar average overlap, except for Spanish and Portuguese, suggesting more localized content or distinct beliefs. For example, the Spanish page references incidents in Spain and Brazil not found in the English version and conspiracy theories targeted at Covid being a lab release from the united states which indicates potential regional influences and slightly divergent perspectives (compared to the mainstream beliefs).
+
+While this graph doesn't tell us about the extent of the spread of misinformation in the countries which use the language, it certainly tells us about how exhaustive the work of Wikipedia Moderators was while trying to report Covid related fake news. This could be in turn interpreted as the general sense of urgency and consideration of Fake news as a whole.
+
+To better visualise in what topics the pages for different languages are similar or different, we created word-clouds that contain the most frequent words from the titles of wikipedia pages about COVID misinformation.
 
 
 <section id="linkHere">
@@ -100,8 +109,7 @@ In order to quantify better the relationship between languages, we can construct
 
 ## Are there cultural differences between popular fake news or do they overlap?
 
-
-The chord plot down below shows the overlap in words between languages.
+The chord plot down below shows the number of overlapping words between pairs of languages. This shows us the paths from one language to the other. By hovering over the chord plot, we can see that there is a big overlap between English, Spanish, Portuguese and the other languages (thickness of chords leaving these zones), while for the local languages there are many small streams that connect to other languages. This might seem logical, but we need to take into consideration that there is a big size effect given by the total number unique words per language, which are lower for the three international languages just mentioned. This can therefore skew our analysis.
 
 {% include_relative /plots/chord_diagram.html %}
 
@@ -116,7 +124,7 @@ To remove the size effect given by the very different number of words and number
   <div style="width: 50%; padding-left: 20px;">
     <p>
      
-Now we see that the higher overlap is for Arab-Chinese and Arab-Italian, with 25% Jaccard similarity, while the lowest is for English-Portuguese, Spanish-Italian, Spanish-Arab, Spanish-Chinese (only 7%). Intersection with Portuguese are also quite low (always below 13%). It would seem that Spanish and Portuguese are isolated clusters of news, which are rather local and not so international.
+Now we see that the higher overlap is for Arab-Chinese and Arab-Italian, with 25% Jaccard similarity, while the lowest is for English-Portuguese, Spanish-Italian, Spanish-Arab, Spanish-Chinese (only 7%). Intersection with Portuguese are also quite low (always below 13%). It would seem that Spanish and Portuguese are isolated clusters of news, which are rather local and don't share many topics with the other languages. This effectively proves what we already deduced from the preliminary analysis of the histograms.
 
 
     </p>
@@ -125,13 +133,13 @@ Now we see that the higher overlap is for Arab-Chinese and Arab-Italian, with 25
 
 
 
-{% include_relative /plots/127.0.0.1.html %}
-
 
 <script src="{{ site.baseurl }}/assets/script.js"></script>
 
 
 **Conclusion**
+
+Even if this part is more qualitative than the others, it is still a solid analysis giving us insights in overlapping COVID-related topics for different languages. Through the metric of Jaccard Similarity, we effectively could infer that Spanish and Portuguese are isolated languages that don't have many topics in common with the other languages. This was not expected, as they are languages spoken in many different countries. 
 
 
 
