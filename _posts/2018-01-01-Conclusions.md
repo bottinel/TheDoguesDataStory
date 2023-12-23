@@ -7,6 +7,6 @@ First, we could prove that indeed there is a significant increase in attention i
 
 Then, we could prove that the topics classified as Fake News on Wikipedia are representative of general media attention with an 85% match. We could also create a timeline of interest and relate them with the mobility change points.
 
-Finally, we could detect a surprising difference between localised and international languages, namely Spanish and Portuguese, which don't have many themes in common even if they can be considered international languages.
+Finally, we could detect a surprising difference between localised and international languages, namely Spanish and Portuguese, which don't have many themes in common with the other studied languages even if they can be considered international languages. Instead, languages like Arabic and Chinese seem way more cosmopolitan.
 
 

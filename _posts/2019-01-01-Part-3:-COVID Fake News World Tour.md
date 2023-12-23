@@ -1,7 +1,7 @@
 
 ---
 
-Now that we have proven than Wikipedia is actually a good tool to study the phenomenon of fake news, we want to study the relationship between COVID Wikipedia pages for different languages. Since the Wikipedia pages in different languages don't have the same structure (so we cannot compare main headings), we want to analyse the links they refer to. What kind of overlap is there between each language? In this way we can see the differences between global and local news and see if fake news tend to spread or to stay local.
+Now that we have proven than Wikipedia is actually a good tool to study the phenomenon of fake news, we want to study the relationship between COVID Wikipedia pages for different languages. Since the Wikipedia pages in different languages don't have the same structure (so we cannot compare main headings), we want to analyse the links they refer to. What kind of overlap is there between each language? In this way we can see the differences between more global and local articles and see if fake news tended to spread or to stay local.
 
 ## Methods
 
@@ -9,10 +9,10 @@ To see the similarities in Wikipedia articles across different languages, we cre
 
 After an initial analysis, a pseudo-bag of words was created from the titles of the english version of the pages for every language. We clean the links, separating the words and removing stopwords and words that are over present, and then we count the number of unique words, along with their number frequency to create word clouds for each language.
 
-In order to quantify better the relationship between languages, we can construct chord plots with the thickness of the chords tying two languages that is proportional to a given overlap metric. We propose two possibilities to study the overlap between these languages.
-The first is through the count of shared articles between languages.
-The second is through an evaluation of the Jaccard similarity of BoWs built for each language out of the titles of articles which were found to have an english equivalent. The Jaccard similarity for the pairs of languages is the size of the intersection divided by the number of words in the union of the two sets.
-We also investigate the articles which had no english equivalent by calculating what proportion of articles they represented out of all referenced articles.
+Additionally, in order to quantify better the relationship between languages, we suggest the following two methods:
+
+Firstly, we evaluate the Jaccard similarity of bows built for each language out of the titles of articles which were found to have an english equivalent. In this way, we can compare which languages shared common topics, something which perhaps could not be seen so easily in the word clouds. 
+Secondly, we plot a chord diagram to study the common articles between languages. It is not normalised as not all articles are as detailed, and we can also see in this way the unequal dimension of the work done across multiple languages to record the spread of misinformation on Wikipedia, as well as topical commonalities.
 
 
 ## What are the hot topics for different languages?  
@@ -22,11 +22,11 @@ As a preliminary analysis, we plot the percentage of Wikipedia pages that have a
 
 {% include_relative /plots/127.0.0.1.html %}
 
-We can see that the percentage of articles which are present only in the original language range from 0 to 20% (maximum value for German). Interestingly, Arab has almost all articles present in the English version, and also has the biggest overlap with the other languages. This could be explained by Arabic being a widely spoking languages under a lot of different influences which leads it to be more impacted by mainstream news and have less focus on local and specific fake news. For the other languages we see a similar average overlap, except for Spanish and Portuguese, suggesting more localized content or distinct beliefs. For example, the Spanish page references incidents in Spain and Brazil not found in the English version and conspiracy theories targeted at Covid being a lab release from the united states which indicates potential regional influences and slightly divergent perspectives (compared to the mainstream beliefs).
+We can see that the percentage of articles which are present only in the original language range from 0 to 20% (maximum value for German). Interestingly, Arab has almost all articles present in the English version, and also has the biggest overlap with the other languages. This could be explained by Arabic being a widely spoking languages under a lot of different influences which leads it to be more impacted by mainstream news and have less focus on local and specific fake news. For the other languages we see a similar average overlap, except for Spanish and Portuguese, suggesting more localized content or distinct beliefs. For example, the Spanish page references incidents in Spain and Brazil not found in the English version and conspiracy theories targeted at COVID being a lab release from the united states which indicates potential regional influences and slightly divergent perspectives (compared to the mainstream beliefs).
 
-While this graph doesn't tell us about the extent of the spread of misinformation in the countries which use the language, it certainly tells us about how exhaustive the work of Wikipedia Moderators was while trying to report Covid related fake news. This could be in turn interpreted as the general sense of urgency and consideration of Fake news as a whole.
+Additionally, while this graph doesn't directly tell us about the extent of the spread of misinformation in the countries which use the language, it certainly tells us about how exhaustive the work of Wikipedia Moderators was while trying to report COVID related fake news. This could perhaps be interpreted as the general effort of information sources from the countries speaking these languages to combat misinformation. But all of this is highly speculative, and open to interpretation. We simply aim to highlight possible links between articles which were considered as linked to fake news for different languages and regions of the world.
 
-To better visualise in what topics the pages for different languages are similar or different, we created word-clouds that contain the most frequent words from the titles of wikipedia pages about COVID misinformation.
+To better visualise in what topics the pages for different languages are similar or different, we created word-clouds that contain the most frequent words from the titles of Wikipedia pages about COVID misinformation.
 
 
 <section id="linkHere">
@@ -104,8 +104,8 @@ To better visualise in what topics the pages for different languages are similar
 
 
 
-Of course, Covid-19 is the most frequent word, and we can use it as baseline to compare the frequency of the other words. In fact, for certain words all the other words are a lot less frequent and with similar frequency. Interestingly, for Spanish, French, and German the biggest words are 'The Times', 'Le monde', and 'United States' respectively. 'conspiracy' and 'Trump' have the second place in frequency. Some words we can see that are always present, like 'China', 'vaccine', 'news', but with variable frequency.
-In order to quantify better the relationship between languages, we can construct a chord plot with the thickness of the chords tying two languages that is proportional to the overlap of words between the two languages.
+Of course, COVID-19 is the most frequent word, and we can use it as baseline to compare the frequency of the other words. In fact, for certain languages all the other words are a lot less frequent and with similar frequency. Interestingly, for Spanish, French, and German the biggest words are 'The Times', 'Le monde', and 'United States' respectively. 'conspiracy' and 'Trump' have the second place in frequency. Some words we can see that are always present, like 'China', 'vaccine', 'news', but with variable frequency.
+In order to quantify visually the connections between languages, we can construct a chord plot with the thickness of the chords tying two languages that is proportional to the overlap of words present in the bag of words created from the articles which they cite (we only consider those which have an english version).
 
 ## Are there cultural differences between popular fake news or do they overlap?
 
@@ -139,7 +139,7 @@ Now we see that the higher overlap is for Arab-Chinese and Arab-Italian, with 25
 
 **Conclusion**
 
-Even if this part is more qualitative than the others, it is still a solid analysis giving us insights in overlapping COVID-related topics for different languages. Through the metric of Jaccard Similarity, we effectively could infer that Spanish and Portuguese are isolated languages that don't have many topics in common with the other languages. This was not expected, as they are languages spoken in many different countries. 
+Even if this part is more qualitative than the others, it is still a solid analysis giving us insights in overlapping COVID-related topics for different languages. Through the metric of Jaccard Similarity, we effectively could infer that Spanish and Portuguese are isolated languages that don't have many topics in common with the other languages. This was not expected, as they are languages spoken in many different countries. Perhaps this is telling of a lower effort from Wikipedia moderators to survey articles potentially linked to Fake News for these languages. 
 
 
 
